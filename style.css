@@ -31,10 +31,18 @@ a:hover {
     color: #CCCCCC; /* Lighter color on hover */
 }
 
-/* Text alignment */
+/* Text alignment and centering */
 .centertext, .biotext, p {
-    text-align: center;
-    margin: 0 20%; /* Central alignment with margins */
+    text-align: justify; /* Keeps text justified */
+    width: 60%; /* Define a suitable width for your text block */
+    margin: 0 auto; /* This centers the block horizontally in its parent */
+    padding: 20px; /* Optional: adds some space inside the block */
+}
+
+/* Optional: Enhance the appearance */
+.centertext {
+    text-align: justify;
+    display: block; /* Ensures the element is treated as a block-level element */
 }
 
 /* Image styling */
