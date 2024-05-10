@@ -32,7 +32,7 @@ a:hover {
 }
 
 /* Text alignment and centering */
-.centertext, .biotext, p {
+.biotext, p {
     text-align: justify; /* Keeps text justified */
     width: 60%; /* Define a suitable width for your text block */
     margin: 0 auto; /* This centers the block horizontally in its parent */
@@ -41,7 +41,7 @@ a:hover {
 
 /* Optional: Enhance the appearance */
 .centertext {
-    text-align: justify;
+    text-align: center;
     display: block; /* Ensures the element is treated as a block-level element */
 }
 
