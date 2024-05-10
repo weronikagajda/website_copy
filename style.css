@@ -1,48 +1,12 @@
+/* General and typography styles */
 .p1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     font-family: system-ui;
-    background-color: #000000; /* Added missing semicolon */
-}
-
-hr {
-    border-style: none;
-    border-top-style: dotted;
-    width: 5%;
-    border-color: rgb(249, 249, 249);
-    border-width: 3px;
-}
-
-img {
-    width: 60%; /* Adjust the width to accommodate margins */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0.5;
-    margin-left: 20%; /* Match text alignment by adding margins */
-    margin-right: 20%;
-}
-
-img:hover {
-    opacity: 1;
-}
-
-video {
-    width: 60%; /* Match image width for consistency */
-    opacity: 0.5;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-video:hover {
-    opacity: 1;
-}
-
-table {
-    color: #FFFAFA;
-    text-align: center;
+    background-color: #000000;
+    color: #FFFAFA; /* Ensures text is readable on a dark background */
 }
 
 h3, h2, p, a {
@@ -51,21 +15,99 @@ h3, h2, p, a {
 }
 
 h4 {
-    color: #FFFAFA;          
+    color: #FFFAFA;
     text-align: center;
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
-.centertext {
-    text-align: center;
-}
-
-.biotext, p {
-    text-align: justify;
-    margin-right: 20%;
-    margin-left: 20%;
-}
-
+/* Link styling */
 a {
     text-decoration: none;
+    color: #FFFAFA; /* Maintain visibility against the dark background */
+}
+
+a:hover {
+    text-decoration: underline; /* Indicates clickable links */
+    color: #CCCCCC; /* Lighter color on hover */
+}
+
+/* Text alignment */
+.centertext, .biotext, p {
+    text-align: center;
+    margin: 0 20%; /* Central alignment with margins */
+}
+
+/* Image styling */
+img {
+    width: 60%;
+    display: block;
+    margin: 20px auto; /* Center images with top and bottom margin */
+    opacity: 0.5; /* Semi-transparent images by default */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+img:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Video styling */
+video {
+    width: 60%;
+    opacity: 0.5;
+    margin: 20px 20%; /* Match image margin for consistency */
+    display: block; /* Ensure block level for centering */
+}
+
+video:hover {
+    opacity: 1;
+}
+
+/* Modal styles for enlarged images */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place regardless of scrolling */
+    z-index: 1; /* Sit on top of other content */
+    padding-top: 100px; /* Push down from the top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity for overlay */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Adjust based on preference */
+    max-width: 1200px; /* Maximum width */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+}
+
+/* for smaller screens */
+@media (max-width: 768px) {
+    .centertext, .biotext, p, img, video {
+        margin: 10px auto; /* Reduced margins for smaller screens */
+        width: 90%; /* More screen space used for content */
+    }
+
+    img, video {
+        opacity: 0.8; /* Slightly more visible by default */
+    }
 }
