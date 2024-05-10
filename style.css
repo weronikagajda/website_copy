@@ -67,7 +67,7 @@ img:hover {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%; /* Standard view */
+    width: 90%; /* Standard view */
     max-width: 1200px; /* Maximum width for larger devices */
     transition: transform 0.3s ease; /* Smooth transformation for scaling */
 }
